@@ -43,22 +43,28 @@ export function assistantDecoderStream() {
           const { toolCallId: id, toolName: name } = value;
           toolCallNames.set(id, name);
           currentToolCall = { id, name, argsText: "" };
+
+          controller.enqueue({
+            type: "tool-call-delta",
+            toolCallType: "function",
+            toolCallId: id,
+            toolName: name,
+            argsTextDelta: "",
+          });
           break;
         }
         case AssistantStreamChunkType.ToolCallDelta: {
           const { toolCallId, argsTextDelta } = value;
-          if (currentToolCall?.id !== toolCallId) {
-            throw new Error(
-              `Received tool call delta for unknown tool call "${toolCallId}".`,
-            );
-          }
 
-          currentToolCall!.argsText += argsTextDelta;
+          const toolName = toolCallNames.get(toolCallId)!;
+          if (currentToolCall?.id === toolCallId) {
+            currentToolCall.argsText += argsTextDelta;
+          }
           controller.enqueue({
             type: "tool-call-delta",
             toolCallType: "function",
-            toolCallId: currentToolCall!.id,
-            toolName: currentToolCall!.name,
+            toolCallId,
+            toolName,
             argsTextDelta: argsTextDelta,
           });
           break;
