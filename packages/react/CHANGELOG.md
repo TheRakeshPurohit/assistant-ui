@@ -1,5 +1,13 @@
 # @assistant-ui/react
 
+## 0.10.22
+
+### Patch Changes
+
+- 7a65c80: feat(assistant-cloud): filesToPdf support
+- Updated dependencies [51b8493]
+  - assistant-stream@0.2.15
+
 ## 0.10.21
 
 ### Patch Changes
