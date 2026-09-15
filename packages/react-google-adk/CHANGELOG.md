@@ -1,5 +1,13 @@
 # @assistant-ui/react-google-adk
 
+## 0.0.31
+
+### Patch Changes
+
+- [#7453](https://github.com/assistant-ui/assistant-ui/pull/7453) [`358c834`](https://github.com/assistant-ui/assistant-ui/commit/358c834c9f121ef1fb686754579a7daa8d88fcbc) - fix: stop `artifacts.load` from rejecting `fileData` artifacts and snake_case artifact responses ([@rupic-app](https://github.com/apps/rupic-app))
+- Updated dependencies [[`4e08ba6`](https://github.com/assistant-ui/assistant-ui/commit/4e08ba680a4adb66fb39043d93f46377be0f861a), [`bc84250`](https://github.com/assistant-ui/assistant-ui/commit/bc842502b68a0dcc4c3728e6f6ea542e5a9bcbc5)]:
+  - @assistant-ui/core@0.3.20
+
 ## 0.0.30
 
 ### Patch Changes

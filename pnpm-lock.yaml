@@ -4321,7 +4321,7 @@ importers:
   packages/react-google-adk:
     dependencies:
       '@assistant-ui/core':
-        specifier: ^0.3.19
+        specifier: ^0.3.20
         version: link:../core
       '@assistant-ui/store':
         specifier: ^0.3.13
@@ -4456,7 +4456,7 @@ importers:
   packages/react-ink-markdown:
     dependencies:
       '@assistant-ui/core':
-        specifier: ^0.3.19
+        specifier: ^0.3.20
         version: link:../core
       '@assistant-ui/store':
         specifier: ^0.3.13
@@ -5004,7 +5004,7 @@ importers:
   packages/svelte:
     dependencies:
       '@assistant-ui/core':
-        specifier: ^0.3.19
+        specifier: ^0.3.20
         version: link:../core
       '@assistant-ui/store':
         specifier: ^0.3.13
@@ -5283,7 +5283,7 @@ importers:
   packages/vue:
     dependencies:
       '@assistant-ui/core':
-        specifier: ^0.3.19
+        specifier: ^0.3.20
         version: link:../core
       '@assistant-ui/store':
         specifier: ^0.3.13
