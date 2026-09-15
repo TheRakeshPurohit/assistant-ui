@@ -1,5 +1,15 @@
 # @assistant-ui/react-mcp
 
+## 0.1.19
+
+### Patch Changes
+
+- [#7465](https://github.com/assistant-ui/assistant-ui/pull/7465) [`03d8a3d`](https://github.com/assistant-ui/assistant-ui/commit/03d8a3dd495bfc26f50ac2d0ecfb5b0a2a1d1060) - fix: let custom `AuthFields` inputs bind to the MCP add-server form ([@okisdev](https://github.com/okisdev))
+  
+  `McpAddFormPrimitive.BearerTokenField` and `McpAddFormPrimitive.ScopesField` are the bound inputs the default `AuthFields` renders. render them inside `AuthFields` children, directly or with `asChild`, so a custom bearer token or OAuth scopes input reaches the submitted auth config. `BearerTokenField` gets `aria-invalid` and the error id for a missing token, as `NameField` does for a missing name.
+- Updated dependencies [[`4e08ba6`](https://github.com/assistant-ui/assistant-ui/commit/4e08ba680a4adb66fb39043d93f46377be0f861a), [`bc84250`](https://github.com/assistant-ui/assistant-ui/commit/bc842502b68a0dcc4c3728e6f6ea542e5a9bcbc5)]:
+  - @assistant-ui/core@0.3.20
+
 ## 0.1.18
 
 ### Patch Changes
